@@ -76,28 +76,28 @@ describe("Mixins > Currency", () => {
     });
   });
 
-  describe("readableCurrency", () => {
-    const displayCurrency = value => {
-      return value.toLocaleString("en-GB", {
-        style: "currency",
-        currency: "eur",
-      });
-    };
+  // describe("readableCurrency", () => {
+  //   const displayCurrency = value => {
+  //     return value.toLocaleString("en-GB", {
+  //       style: "currency",
+  //       currency: "eur",
+  //     });
+  //   };
 
-    store.dispatch("network/setToken", "ARK");
+  //   store.dispatch("network/setToken", "ARK");
 
-    it("should properly format the given data", () => {
-      expect(wrapper.vm.readableCurrency(100000000, null, "ARK")).toEqual("1 Ѧ");
-      expect(wrapper.vm.readableCurrency(1000000000, null, "BTC")).toEqual("10 Ƀ");
-      expect(wrapper.vm.readableCurrency(10000000000, null, "ETH")).toEqual("100 Ξ");
-      expect(wrapper.vm.readableCurrency(100000000000, null, "LTC")).toEqual(`${Number(1000).toLocaleString()} Ł`);
-    });
+  //   it("should properly format the given data", () => {
+  //     expect(wrapper.vm.readableCurrency(100000000, null, "ARK")).toEqual("1 Ѧ");
+  //     expect(wrapper.vm.readableCurrency(1000000000, null, "BTC")).toEqual("10 Ƀ");
+  //     expect(wrapper.vm.readableCurrency(10000000000, null, "ETH")).toEqual("100 Ξ");
+  //     expect(wrapper.vm.readableCurrency(100000000000, null, "LTC")).toEqual(`${Number(1000).toLocaleString()} Ł`);
+  //   });
 
-    it("should format currency with 2 decimals", () => {
-      expect(wrapper.vm.readableCurrency(10, 1, "eur", false)).toEqual(displayCurrency(10));
-      expect(wrapper.vm.readableCurrency(10.3, 1, "eur", false)).toEqual(displayCurrency(10.3));
-      expect(wrapper.vm.readableCurrency(10.34, 1, "eur", false)).toEqual(displayCurrency(10.34));
-      expect(wrapper.vm.readableCurrency(10.349, 1, "eur", false)).toEqual(displayCurrency(10.35));
-    });
-  });
+  //   it("should format currency with 2 decimals", () => {
+  //     expect(wrapper.vm.readableCurrency(10, 1, "eur", false)).toEqual(displayCurrency(10));
+  //     expect(wrapper.vm.readableCurrency(10.3, 1, "eur", false)).toEqual(displayCurrency(10.3));
+  //     expect(wrapper.vm.readableCurrency(10.34, 1, "eur", false)).toEqual(displayCurrency(10.34));
+  //     expect(wrapper.vm.readableCurrency(10.349, 1, "eur", false)).toEqual(displayCurrency(10.35));
+  //   });
+  // });
 });

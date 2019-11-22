@@ -31,13 +31,14 @@ export default {
       value *= rate || store.getters["currency/rate"];
 
       const cryptos: { [key: string]: string } = {
+        IQD: "IQD",
         ARK: "Ѧ",
         BTC: "Ƀ",
         ETH: "Ξ",
         LTC: "Ł",
       };
 
-      return [store.getters["network/token"], "BTC", "ETH", "LTC"].some(c => currencyName.indexOf(c) > -1)
+      return [store.getters["network/token"], "BTC", "ETH", "LTC", "IQD"].some(c => currencyName.indexOf(c) > -1)
         ? `${value.toLocaleString(locale, {
             maximumFractionDigits: 8,
           })} ${cryptos[currencyName]}`
