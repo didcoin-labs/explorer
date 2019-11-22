@@ -72,7 +72,7 @@ export default class HeaderDefault extends Vue {
   }
 
   get shouldDisplayChart(): boolean {
-    return this.$route.name === "home" && this.networkDefaults.priceChartOptions.enabled;
+    return false; // this.$route.name === "home" && this.networkDefaults.priceChartOptions.enabled;
   }
 
   public mounted() {

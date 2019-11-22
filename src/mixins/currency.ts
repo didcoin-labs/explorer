@@ -48,7 +48,7 @@ export default {
     },
 
     rawCurrency(value: number, currencyName: string): string {
-      return [store.getters["network/token"], "BTC", "ETH", "LTC"].some(c => currencyName.indexOf(c) > -1)
+      return [store.getters["network/token"], "BTC", "ETH", "LTC", "IQD"].some(c => currencyName.indexOf(c) > -1)
         ? value.toLocaleString(locale, {
             maximumFractionDigits: 8,
           })
