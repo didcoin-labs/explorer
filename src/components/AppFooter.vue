@@ -13,7 +13,7 @@
         >
       </div>
     </div>
-    <div class="text-center">
+    <div class="text-center" v-if="false">
       <a v-for="social in socialMediaData" :key="social.name" :href="social.url" target="_blank">
         <SvgIcon class="m-1" :name="`social/${social.name}`" :view-box="social.viewBox" />
       </a>
