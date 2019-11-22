@@ -1,19 +1,20 @@
 {
-  "title": "TARK Explorer",
-  "server": "http://127.0.0.1:4003/api",
+  "title": "didcoin Testnet Explorer",
+  "server": "http://198.13.38.36:4003/api/v2",
   "alias": "Testnet local",
-  "activeDelegates": 51,
-  "rewardOffset": 75600,
+  "activeDelegates": "53",
+  "rewardOffset": "1000000",
   "currencies": [],
   "knownWallets": {},
   "defaults": {
-    "token": "TARK",
-    "symbol": "TѦ",
+    "token": "DID",
+    "symbol": "D",
     "currency": null,
     "priceChartOptions": {
       "enabled": false,
       "period": "day",
       "type": "price"
-    }
+    },
+    "priceChart": false
   }
 }
