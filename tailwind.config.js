@@ -300,6 +300,7 @@ module.exports = {
       "5xl": "100rem",
       "25px": "25px",
       "38px": "38px",
+      "50px": "50px",
       "480px": "480px",
       full: "100%",
     },
